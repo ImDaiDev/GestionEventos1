@@ -7,6 +7,8 @@ public class Utils {
 	static List<Usuario> listaUsuarios = new ArrayList<>();
 	static List<Usuario> listaNormales = new ArrayList<>();
 	static List<Usuario> listaAdmin = new ArrayList<>();
+	static List<Pelicula> listaPelicula = new ArrayList<>();
+	static List<Inscripcion> listaInsc = new ArrayList<>(); 
 	
 	public static List<Usuario> getListaUsuarios() {
 		return listaUsuarios;
@@ -34,6 +36,22 @@ public class Utils {
 			} else
 				listaNormales.add(us);
 		}
+	}
+	
+	public static List<Pelicula> getListaPelicula() {
+		return listaPelicula;
+	}
+	
+	public static void setListaPelicula(List<Pelicula> listaPelicula) {
+		Utils.listaPelicula = listaPelicula;
+	}
+	
+	public static List<Inscripcion> getListaInsc() {
+		return listaInsc;
+	}
+	
+	public static void setListaInsc(List<Inscripcion> listaInsc) {
+		Utils.listaInsc = listaInsc;
 	}
 	
 	
