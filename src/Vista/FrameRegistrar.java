@@ -112,7 +112,7 @@ public class FrameRegistrar extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(comprobarCampos()) { //Devuelve TRUE si no hay campos en blanco, la contraseña no es igual  ni el email es repetido
-					Usuario us = new Usuario(Integer.parseInt(tf_Edad.getText()), tf_Nombre.getText(), false, tf_Email.getText(), pf_contraseña.getPassword().toString());
+					Usuario us = new Usuario(Integer.parseInt(tf_Edad.getText()), tf_Nombre.getText(), false, tf_Email.getText(), new String(pf_contraseña.getPassword()));
 					List<Usuario> temp = Utils.getListaUsuarios();
 					temp.add(us);
 					Utils.setListaUsuarios(temp);

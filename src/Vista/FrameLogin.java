@@ -1,18 +1,24 @@
 package Vista;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import java.awt.BorderLayout;
-import java.awt.GridLayout;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import java.awt.Font;
-import javax.swing.JPasswordField;
 import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+import Modelo.Usuario;
+import Modelo.Utils;
 
 public class FrameLogin extends JFrame {
 
@@ -81,10 +87,39 @@ public class FrameLogin extends JFrame {
 		JButton btnLogin = new JButton("Login");
 		btnLogin.setFont(new Font("Verdana", Font.BOLD, 20));
 		panel_1.add(btnLogin);
+		btnLogin.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				for (Usuario user: Utils.getListaUsuarios()) {
+					if(user.getNombre().equals(tf_Nombre.getText()) && user.getPassw().equals(new String(pf_contraseña.getPassword()))) {
+						JOptionPane.showMessageDialog(null, "Inición sesiada");
+						if(user.getAdmin()) {
+							FrameEGestion eg = new FrameEGestion();
+							dispose();
+						} else {
+							FrameGEventos ev = new FrameGEventos();
+							dispose();
+						}
+					} else {
+						JOptionPane.showInternalMessageDialog(null, "Credenciales erróneas");
+					}
+				}
+				
+			}
+			
+		});
 		
 		JButton btnVolver = new JButton("Volver");
 		btnVolver.setFont(new Font("Verdana", Font.BOLD, 20));
 		panel_1.add(btnVolver);
+		btnVolver.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				FrameInicial back = new FrameInicial();
+				dispose();
+			}
+		});
 		
 		
 		
