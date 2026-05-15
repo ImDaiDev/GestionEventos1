@@ -39,9 +39,9 @@ public class FrameEGestion extends JFrame {
 	public FrameEGestion() {
 		setTitle("Menú Gestión");
 		setResizable(false);
-		setBackground(Color.ORANGE);
+		setBackground(Color.MAGENTA);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 476, 306);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.MAGENTA);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -60,14 +60,19 @@ public class FrameEGestion extends JFrame {
 		panelBotones.setLayout(null);
 		
 		JButton btnUsuarios = new JButton("Usuarios");
-		btnUsuarios.setFont(new Font("Verdana", Font.BOLD, 25));
-		btnUsuarios.setBounds(32, 78, 169, 62);
+		btnUsuarios.setFont(new Font("Verdana", Font.BOLD, 17));
+		btnUsuarios.setBounds(17, 80, 122, 52);
 		panelBotones.add(btnUsuarios);
 		
 		JButton btnTareas = new JButton("Tareas");
-		btnTareas.setFont(new Font("Verdana", Font.BOLD, 25));
-		btnTareas.setBounds(211, 79, 185, 61);
+		btnTareas.setFont(new Font("Verdana", Font.BOLD, 17));
+		btnTareas.setBounds(149, 80, 112, 52);
 		panelBotones.add(btnTareas);
+		
+		JButton btnEventos = new JButton("inscripciones");
+		btnEventos.setFont(new Font("Verdana", Font.BOLD, 17));
+		btnEventos.setBounds(271, 80, 160, 52);
+		panelBotones.add(btnEventos);
 		
 		
 		setLocationRelativeTo(null);
