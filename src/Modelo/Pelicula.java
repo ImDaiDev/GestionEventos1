@@ -1,14 +1,14 @@
 package Modelo;
 
 public class Pelicula {
-	private int id, maxAssist;
+	private Integer id, maxAssist;
 	private String nombre, fecha, rutaImg;
 	
 	public Pelicula() {
 		super();
 	}
 
-	public Pelicula(int id, int maxAssist, String nombre, String fecha, String rutaImg) {
+	public Pelicula(Integer id, Integer maxAssist, String nombre, String fecha, String rutaImg) {
 		super();
 		this.id = id;
 		this.maxAssist = maxAssist;
@@ -17,7 +17,7 @@ public class Pelicula {
 		this.rutaImg = rutaImg;
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
@@ -25,7 +25,7 @@ public class Pelicula {
 		this.id = id;
 	}
 
-	public int getMaxAssist() {
+	public Integer getMaxAssist() {
 		return maxAssist;
 	}
 
