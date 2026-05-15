@@ -31,7 +31,7 @@ public class Utils {
 	
 	public static void separarUsuarios() {
 		for(Usuario us: listaUsuarios) {
-			if(us.getRol().equalsIgnoreCase("Admin")) {
+			if(us.getAdmin() == true) {
 				listaAdmin.add(us);
 			} else
 				listaNormales.add(us);
