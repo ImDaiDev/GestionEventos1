@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
+
 import java.awt.BorderLayout;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
@@ -17,6 +19,8 @@ public class FrameGEventos extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable table;
+	private DefaultTableModel modelo= new DefaultTableModel();
+	private String[] ids= {"ID", "MaxAssist", "Nombre", "Fecha","RutaImg"};
 
 	/**
 	 * Launch the application.
@@ -44,15 +48,22 @@ public class FrameGEventos extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(new BorderLayout(0, 0));
+		contentPane.setLayout(new BorderLayout());
+		
+		modelo.setColumnIdentifiers(ids);
+		
 		
 		JScrollPane Scp_Tabla = new JScrollPane();
-		Scp_Tabla.setViewportBorder(new EmptyBorder(35, 65, 35, 65));
-		contentPane.add(Scp_Tabla, BorderLayout.CENTER);
+		Scp_Tabla.setViewportBorder(new EmptyBorder(0, 0, 0, 0));
 		
-		table = new JTable();
-		table.setBorder(new EmptyBorder(35, 65, 35, 65));
+		
+		table = new JTable(modelo);
+		table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
 		Scp_Tabla.setViewportView(table);
+
+		
+		
+		contentPane.add(Scp_Tabla, BorderLayout.CENTER);
 		
 		JPanel panelbtn = new JPanel();
 		panelbtn.setBackground(Color.DARK_GRAY);
@@ -75,15 +86,15 @@ public class FrameGEventos extends JFrame {
 		panelbtn.add(btnVolver);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(Color.MAGENTA);
+		panel_1.setBackground(new Color(220, 20, 60));
 		contentPane.add(panel_1, BorderLayout.NORTH);
 		
 		JPanel panel_2 = new JPanel();
-		panel_2.setBackground(Color.MAGENTA);
+		panel_2.setBackground(new Color(220, 20, 60));
 		contentPane.add(panel_2, BorderLayout.EAST);
 		
 		JPanel panel_3 = new JPanel();
-		panel_3.setBackground(Color.MAGENTA);
+		panel_3.setBackground(new Color(220, 20, 60));
 		contentPane.add(panel_3, BorderLayout.WEST);
 		
 		
