@@ -3,24 +3,15 @@ package Modelo;
 import java.util.Random;
 
 public class Usuario {
-<<<<<<< HEAD
-	private Integer id, edad;
-	private String nombre, rol, email, passw;
-=======
 	private int id, edad;
 	private String nombre, email, passw;
 	private boolean admin;
->>>>>>> 518e901a6a1adf94c851fcd502894305e17cf409
 	
 	public Usuario() {
 		super();
 	}
 
-<<<<<<< HEAD
-	public Usuario(Integer id, Integer edad, String nombre, String rol, String email, String passw) {
-=======
 	public Usuario(int edad, String nombre, boolean admin, String email, String passw) {
->>>>>>> 518e901a6a1adf94c851fcd502894305e17cf409
 		super();
 		this.id = generarId();
 		this.edad = edad;
