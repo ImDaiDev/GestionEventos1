@@ -1,19 +1,18 @@
 package Vista;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.Font;
 import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 
 public class FrameInicial extends JFrame {
 
@@ -58,11 +57,25 @@ public class FrameInicial extends JFrame {
 		btnLogin.setFont(new Font("Times New Roman", Font.BOLD, 37));
 		btnLogin.setBounds(32, 59, 159, 94);
 		panelBotones.add(btnLogin);
+		btnLogin.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				FrameLogin log = new FrameLogin();
+				dispose();
+			}	
+		});
 		
 		JButton btnRegistrar = new JButton("Registrar");
 		btnRegistrar.setFont(new Font("Times New Roman", Font.BOLD, 37));
 		btnRegistrar.setBounds(218, 59, 179, 94);
 		panelBotones.add(btnRegistrar);
+		btnRegistrar.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				FrameRegistrar reg = new FrameRegistrar();
+				dispose();
+			}
+		});
 		
 		JLabel lblBienvenido = new JLabel("Bienvenid@");
 		lblBienvenido.setForeground(Color.WHITE);
