@@ -19,7 +19,7 @@ public class FrameRegistrar extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField tf_Nombre;
-	private JPasswordField pf_contraseña;
+	private JPasswordField pf_contraseña, pf_contraseñaRep;
 
 	/**
 	 * Launch the application.
@@ -45,14 +45,14 @@ public class FrameRegistrar extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 306);
 		contentPane = new JPanel();
-		contentPane.setBackground(Color.MAGENTA);
+		contentPane.setBackground(Color.RED);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
 		JPanel panel = new JPanel();
 		contentPane.add(panel, BorderLayout.CENTER);
-		panel.setLayout(new GridLayout(2, 2, 0, 0));
+		panel.setLayout(new GridLayout(3, 2, 0, 0));
 		
 		JLabel lblUsuario = new JLabel("Usuario");
 		lblUsuario.setBackground(Color.ORANGE);
@@ -73,6 +73,16 @@ public class FrameRegistrar extends JFrame {
 		pf_contraseña.setFont(new Font("Tahoma", Font.BOLD, 20));
 		pf_contraseña.setColumns(15);
 		panel.add(pf_contraseña);
+		
+		JLabel lblContraseñaRep = new JLabel("Repita la contraseña");
+		lblContraseñaRep.setBackground(Color.ORANGE);
+		lblContraseñaRep.setFont(new Font("Times New Roman", Font.ITALIC, 20));
+		panel.add(lblContraseñaRep);
+		
+		pf_contraseñaRep = new JPasswordField();
+		pf_contraseñaRep.setFont(new Font("Tahoma", Font.BOLD, 20));
+		pf_contraseñaRep.setColumns(15);
+		panel.add(pf_contraseñaRep);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.DARK_GRAY);
