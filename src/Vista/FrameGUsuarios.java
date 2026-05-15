@@ -104,5 +104,9 @@ public class FrameGUsuarios extends JFrame {
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}
+	
+	
+	
+	
 
 }

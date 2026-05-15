@@ -1,14 +1,14 @@
 package Modelo;
 
 public class Usuario {
-	private int id, edad;
+	private Integer id, edad;
 	private String nombre, rol, email, passw;
 	
 	public Usuario() {
 		super();
 	}
 
-	public Usuario(int id, int edad, String nombre, String rol, String email, String passw) {
+	public Usuario(Integer id, Integer edad, String nombre, String rol, String email, String passw) {
 		super();
 		this.id = id;
 		this.edad = edad;
@@ -18,7 +18,7 @@ public class Usuario {
 		this.passw = passw;
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
@@ -26,7 +26,7 @@ public class Usuario {
 		this.id = id;
 	}
 
-	public int getEdad() {
+	public Integer getEdad() {
 		return edad;
 	}
 
